@@ -4,7 +4,7 @@
       <div v-if="rounds < MAX_ROUNDS" class="blue-green-test-content">
         <transition name="fade-up" mode="out-in">
           <h1 v-if="showInitialMessage" key="initial" class="blue-green-test-title">
-            <span class="background-white">测试<i>你</i>对蓝绿色的区分</span>
+            <span class="background-white">测试你对蓝绿色的区分</span>
           </h1>
           <h1 v-else key="main" class="blue-green-test-title">
             <span class="background-white">你眼中的蓝色和大众眼中的蓝色有区别吗？</span>
@@ -215,7 +215,6 @@
 <script>
 import { createClient } from '@supabase/supabase-js'
 import { MAX_ROUNDS, VERSION, BIN_POSITION, BIN_COUNT, X_CDF, Y_CDF } from '@/config'
-// import { SUPABASE_URL, SUPABASE_KEY } from '@/keys'
 import confetti from 'https://cdn.skypack.dev/canvas-confetti'
 import Results from './Results.vue'
 import { fitSigmoid } from '@/utils/glmUtils'
