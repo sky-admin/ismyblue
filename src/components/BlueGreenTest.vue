@@ -40,7 +40,7 @@
           class="blue-green-test-button submit-button grow-button"
           :disabled="submitted"
         >
-          {{ submitted ? 'Submitted!' : 'Submit results' }}
+          {{ submitted ? '已提交!' : '提交结果' }}
         </button>
         <button
           @click="showAbout = true"
