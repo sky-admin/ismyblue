@@ -22,16 +22,16 @@
       </div>
       <div v-if="rounds < MAX_ROUNDS" class="blue-green-test-button-container three-buttons">
         <button @click="selectColor('blue')" class="blue-green-test-button blue-button grow-button">
-          This is blue
+          这是蓝色
         </button>
         <button @click="reset" class="blue-green-test-button mid-reset-button grow-button">
-          Reset
+          重新开始
         </button>
         <button
           @click="selectColor('green')"
           class="blue-green-test-button green-button grow-button"
         >
-          This is green
+          这是绿色
         </button>
       </div>
       <div v-else class="blue-green-test-button-container two-buttons">
@@ -46,10 +46,10 @@
           @click="showAbout = true"
           class="blue-green-test-button final-reset-button grow-button"
         >
-          About
+          关于项目
         </button>
         <button @click="reset" class="blue-green-test-button final-reset-button grow-button">
-          Reset
+          再来一次
         </button>
       </div>
     </div>
