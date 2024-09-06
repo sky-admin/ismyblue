@@ -215,14 +215,17 @@
 <script>
 import { createClient } from '@supabase/supabase-js'
 import { MAX_ROUNDS, VERSION, BIN_POSITION, BIN_COUNT, X_CDF, Y_CDF } from '@/config'
-import { SUPABASE_URL, SUPABASE_KEY } from '@/keys'
+// import { SUPABASE_URL, SUPABASE_KEY } from '@/keys'
 import confetti from 'https://cdn.skypack.dev/canvas-confetti'
 import Results from './Results.vue'
 import { fitSigmoid } from '@/utils/glmUtils'
 
 import maskImage from '@/assets/mask.png'
 
-const supabase = createClient(SUPABASE_URL, SUPABASE_KEY)
+const supabaseUrl = 'https://pnebergebsotpiobvvea.supabase.co'
+const supabaseKey = process.env.SUPABASE_KEY
+
+const supabase = createClient(supabaseUrl, supabaseKey)
 
 export default {
   components: {
