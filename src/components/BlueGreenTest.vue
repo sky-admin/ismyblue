@@ -4,10 +4,10 @@
       <div v-if="rounds < MAX_ROUNDS" class="blue-green-test-content">
         <transition name="fade-up" mode="out-in">
           <h1 v-if="showInitialMessage" key="initial" class="blue-green-test-title">
-            <span class="background-white">Test <i>your</i> color categorization</span>
+            <span class="background-white">测试<i>你</i>对蓝绿色的区分</span>
           </h1>
           <h1 v-else key="main" class="blue-green-test-title">
-            <span class="background-white">Is <i>my</i> blue <i>your</i> blue?</span>
+            <span class="background-white">你眼中的蓝色和大众眼中的蓝色有区别吗？</span>
           </h1>
         </transition>
       </div>
