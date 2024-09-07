@@ -27,9 +27,3 @@ npm run build
 ```sh
 npm run lint
 ```
-
-### Deploy
-
-```sh
-netlify deploy --prod
-```

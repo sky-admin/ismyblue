@@ -254,7 +254,9 @@ export default {
       yCdf: Y_CDF,
       showAbout: false,
       showDemo: false,
-      anonymousId: this.generateAnonymousId()
+      anonymousId: this.generateAnonymousId(),
+      firstLanguage: '',
+      colorBlindness: false
     }
   },
   computed: {
@@ -297,7 +299,7 @@ export default {
         this.polarity,
         0.4
       )
-      this.polarity = polarity == 1 ? -1 : 1
+      this.polarity = polarity === 1 ? -1 : 1
       this.currentHue = newProbe
       this.rounds++
       if (this.rounds === MAX_ROUNDS) {
@@ -340,7 +342,7 @@ export default {
         this.showDemo = false
       } catch (error) {
         console.error('Error submitting demographics:', error)
-        alert('Failed to submit demographics. Please try again.')
+        alert('提交统计信息失败，请重试。')
       }
     },
     async submitResults() {
@@ -376,7 +378,7 @@ export default {
         this.showDemo = true
       } catch (error) {
         console.error('Error submitting results:', error)
-        alert('Failed to submit results. Please try again.')
+        alert('提交结果失败，请稍后重试')
       }
     },
     gatherDeviceInfo() {
