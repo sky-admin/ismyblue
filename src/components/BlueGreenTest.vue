@@ -177,7 +177,7 @@
 <script>
 import { createClient } from '@supabase/supabase-js'
 import { MAX_ROUNDS, VERSION, BIN_POSITION, BIN_COUNT, X_CDF, Y_CDF } from '@/config'
-import confetti from 'https://cdn.skypack.dev/canvas-confetti'
+import confetti from 'canvas-confetti'
 import Results from './Results.vue'
 import { fitSigmoid } from '@/utils/glmUtils'
 
