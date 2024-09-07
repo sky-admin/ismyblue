@@ -15,20 +15,20 @@
     </div>
     <div class="blue-green-test-result-text w-full mt-0 bg-white">
       <p class="result-text">
-        <i>Your</i> boundary is at hue {{ Math.round(userThreshold) }},
+        你的边界色相值为{{ Math.round(userThreshold) }}，
         <span v-if="greenInclusive > 0.55">
-          bluer than {{ Math.round(greenInclusive * 100) }}% of the population. For <i>you</i>,
-          turquoise
+          比{{ Math.round(greenInclusive * 100) }}%的人群更偏蓝。对你来说，
+          青色
           <span class="color-chip mr-1"></span>
-          is green.
+          属于绿色。
         </span>
         <span v-else-if="greenInclusive < 0.45">
-          greener than {{ Math.round((1 - greenInclusive) * 100) }}% of the population. For
-          <i>you</i>, turquoise
+          比{{ Math.round((1 - greenInclusive) * 100) }}%的人群更偏绿。对你来说，
+          青色
           <span class="color-chip mr-1"></span>
-          is blue.
+          属于蓝色。
         </span>
-        <span v-else> just like the population median. You're a true neutral. </span>
+        <span v-else>与人群中位数完全一致。你是一个真正的中立者。</span>
       </p>
     </div>
   </div>

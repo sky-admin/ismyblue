@@ -56,156 +56,118 @@
     <div v-if="submitted && showDemo" class="blue-green-test-submitted-message about-popup">
       <div class="about-content">
         <button @click="showDemo = false" class="close-button">&times;</button>
-        <h2>Thanks! Before you go...</h2>
+        <h2>谢谢您！在您离开之前...</h2>
         <p>
-          Optionally tell us a bit about yourself. We'll make aggregate plots for how different
-          people categorize colors.
+          如果方便的话，请告诉我们一些关于您的信息。我们将汇总不同人群对颜色分类的数据，制作综合分析图表。
         </p>
-        <h3>Your first language</h3>
+        <h3>您的母语</h3>
         <form @submit.prevent="submitDemographics">
           <div class="form-group">
-            <label for="firstLanguage"
-              >Languages differ in how they name colors. What's your first language?</label
-            >
+            <label for="firstLanguage">不同语言对颜色的命名方式有所不同。您的母语是什么？</label>
             <div>
               <select id="firstLanguage" v-model="firstLanguage" class="form-control">
-                <option value="Unspecified">Select a language</option>
-                <option value="English">English</option>
-                <option value="Spanish">Spanish</option>
-                <option value="Portuguese">Portuguese</option>
-                <option value="French">French</option>
-                <option value="German">German</option>
-                <option value="Italian">Italian</option>
-                <option value="Greek">Greek</option>
-                <option value="Russian">Russian</option>
-                <option value="Arabic">Arabic</option>
-                <option value="Chinese">Chinese</option>
-                <option value="Japanese">Japanese</option>
-                <option value="Korean">Korean</option>
-                <option value="Thai">Thai</option>
-                <option value="Vietnamese">Vietnamese</option>
+                <option value="Unspecified">请选择一种语言</option>
+                <option value="Chinese">中文</option>
+                <option value="English">英语</option>
+                <option value="Spanish">西班牙语</option>
+                <option value="Portuguese">葡萄牙语</option>
+                <option value="French">法语</option>
+                <option value="German">德语</option>
+                <option value="Italian">意大利语</option>
+                <option value="Greek">希腊语</option>
+                <option value="Russian">俄语</option>
+                <option value="Arabic">阿拉伯语</option>
+                <option value="Japanese">日语</option>
+                <option value="Korean">韩语</option>
+                <option value="Thai">泰语</option>
+                <option value="Vietnamese">越南语</option>
                 <option value="Other with blue-green distinction">
-                  Another language with distinct words for blue and green
+                  其他有蓝色和绿色区分的语言
                 </option>
                 <option value="Other without blue-green distinction">
-                  Another language without a blue-green distinction
+                  其他没有蓝绿色区分的语言
                 </option>
               </select>
             </div>
           </div>
-          <h3>Are you colorblind?</h3>
+          <h3>您是色盲吗？</h3>
           <div class="form-group">
-            <label for="colorBlindness">Being colorblind might affect the results.</label>
+            <label for="colorBlindness">色盲可能会影响测试结果。</label>
             <div>
               <select id="colorBlindness" v-model="colorBlindness" class="form-control">
-                <option value="unspecified">Select an option</option>
-                <option value="dontknow">I don't know</option>
-                <option value="no">No</option>
-                <option value="red-green">Yes, red-green, unknown subtype</option>
-                <option value="protanopia">Yes, protanopia</option>
-                <option value="protanomaly">Yes, protanomaly</option>
-                <option value="deuteranopia">Yes, deuteranopia</option>
-                <option value="deuteranomaly">Yes, deuteranomaly</option>
-                <option value="tritanopia">Yes, tritanopia</option>
-                <option value="tritanomaly">Yes, tritanomaly</option>
-                <option value="achromatopsia">Yes, achromatopsia</option>
-                <option value="achromatomaly">Yes, achromatomaly</option>
+                <option value="dontknow">我不确定</option>
+                <option value="no">否</option>
+                <option value="red-green">是的，红绿色盲，具体类型未知</option>
+                <option value="protanopia">是的，原色盲</option>
+                <option value="protanomaly">是的，原色弱</option>
+                <option value="deuteranopia">是的，绿色盲</option>
+                <option value="deuteranomaly">是的，绿色弱</option>
+                <option value="tritanopia">是的，蓝黄色盲</option>
+                <option value="tritanomaly">是的，蓝黄色弱</option>
+                <option value="achromatopsia">是的，全色盲</option>
+                <option value="achromatomaly">是的，全色弱</option>
               </select>
             </div>
-            <p><b>This is not a diagnostic tool.</b></p>
+            <p><b>注意，这不是一个诊断工具。</b></p>
           </div>
-          <button type="submit" class="submit-button-demo">Submit</button>
+          <button type="submit" class="submit-button-demo">提交</button>
         </form>
       </div>
     </div>
     <div v-if="showAbout" class="about-popup">
       <div class="about-content">
         <button @click="showAbout = false" class="close-button">&times;</button>
-        <h2>About This Website</h2>
+        <h2>关于这个网站</h2>
         <p>
-          People have different names for the colors they see.
+          人们对自己看到的颜色有不同的命名。
           <a href="https://en.wikipedia.org/wiki/Sapir%E2%80%93Whorf_hypothesis" target="_blank"
-            >Language can affect how we memorize and name colors</a
-          >. This is a color naming test designed to measure your personal blue-green boundary.
+          >语言可以影响我们如何记忆和命名颜色</a
+          >。这是一个设计用于测量您个人蓝绿色边界的颜色命名测试。
         </p>
-        <h2>Test validity</h2>
+        <h2>测试的有效性</h2>
         <p>
-          <b><i>This website is for entertainment purposes only.</i></b>
+          <b><i>本网站仅供娱乐用途。</i></b>
         </p>
         <p>
-          Color perception is tricky to measure–vision scientists use specialized calibrated
-          equipment to color perception. Graphic designers use physical color cards, such as those
+          颜色感知是很难测量的——视觉科学家使用专业校准设备来测量颜色感知。平面设计师使用物理色卡，如
           <a
             href="https://www.npr.org/2024/07/19/1197961103/pantone-colors-lawrence-herbert-stuart-semple-standards"
-            >made by Pantone</a
-          >, so that they can communicate colors unambiguously. Here we use your monitor or phone to
-          test how you categorize colors, which is far from perfect, since your calibration may
-          differ from mine.
+          >Pantone 生产的色卡</a
+          >，以便能够明确地传达颜色。在这里，我们使用您的显示器或手机来测试您如何分类颜色，这远非完美，因为您的校准可能与我的不同。
         </p>
         <p>
-          The validity of the inference is limited by the calibration of your monitor, ambient
-          lighting, and filters such as night mode. Despite these limitations, the results should
-          have good test-retest reliability <i>on the same device, in the same ambient light</i>,
-          which you can verify by taking the test multiple times. If you want to compare your
-          results with friends, use the same device in the same ambient light.
+          推断的有效性受到显示器校准、环境光和夜间模式等滤镜的限制。尽管存在这些限制，结果在<i>同一设备、同样环境光</i>下应具有良好的测试-重测可靠性，您可以通过多次测试来验证这一点。如果您想与朋友比较结果，请在同样的设备和环境光下进行。
         </p>
         <p>
-          Getting outlier results doesn't mean there's anything wrong with your vision. It might
-          mean you have an idiosyncratic way of naming colors, or that your monitor and lighting is
-          unusual.
+          获得异常结果并不意味着您的视力有问题。这可能意味着您有一种独特的颜色命名方式，或者您的显示器和光线设置不同寻常。
         </p>
-        <h2>Technical Details</h2>
+        <h2>技术细节</h2>
         <p>
-          The test asks you to categorize colors sequentially. Colors are often represented in HSL
-          (hue, saturation, lightness) color space. Hue 120 is green, and hue 240 is blue. The test
-          focuses on blue-green hues between 150 and 210. The test assumes that your responses
-          between blue and green are represented by a sigmoid curve. It sequentially fits that
-          sigmoid curve to your responses:
+          该测试要求您依次分类颜色。颜色通常以 HSL（色相、饱和度、亮度）色彩空间表示。色相 120 为绿色，色相 240 为蓝色。该测试重点关注 150 到 210 之间的蓝绿色色相。测试假设您对蓝色和绿色之间的响应以 S 型曲线表示。它会依次将 S 型曲线拟合到您的响应：
         </p>
 
-        <img src="@/assets/formula.svg" alt="Formula" />
+        <img src="@/assets/formula.svg" alt="公式" />
         <br />
         <p>
-          This is equivalent to a logistic regression model. The test uses a maximum-a-posteriori
-          (MAP) estimation algorithm (specifically, a second order Newton method implemented in pure
-          JS, no calls to a backend) to fit the sigmoid curve to your responses, with a vague prior
-          on the scale and offset parameters. It uses the fitted curve to determine which color will
-          be presented next. It tries to be smart about where it samples new points, focusing on
-          regions where you're predicted to be intermediately confident in your responses. To
-          improve the validity of the results, it randomizes which points it samples, and uses a
-          noise mask to mitigate visual adaptation.
+          这相当于一个逻辑回归模型。测试使用最大后验估计（MAP）算法（具体而言，是用纯 JavaScript 实现的二阶牛顿法，不调用后台）将 S 型曲线拟合到您的响应，且对比例和偏移参数有一个模糊的先验。它使用拟合的曲线来确定接下来会呈现的颜色。它尝试聪明地选择采样新点的位置，重点放在您预测为中等信心的区域。为了提高结果的有效性，它会随机选择采样点，并使用噪声掩膜减轻视觉适应。
         </p>
         <p>
-          It's a curve fit, not a binary search. In theory, if you feel like you're guessing in the
-          middle shades, or even guessing incorrectly, that should be fine. If you're inconsistent
-          in the middle, the curve fit should be able to recover, although your estimated threshold
-          will have larger error bars.
+          这是一个曲线拟合，而不是二分查找。从理论上讲，如果您在中间色调中觉得自己在猜测，甚至猜错了也没关系。如果您在中间不一致，曲线拟合应该能够恢复，尽管您的估计阈值会有更大的误差。
         </p>
 
-        <h2>Results</h2>
+        <h2>结果</h2>
         <p>
-          In early experiments, we found that people's responses cluster around 175, which
-          coincidentally is the same as the named HTML color turquoise
-          <span class="color-chip-turquoise mr-1"></span>. This is interesting, because the nominal
-          boundary between blue and green is at 180, the named HTML color cyan
-          <span class="color-chip-cyan mr-1"></span>. That means most people's boundaries are
-          shifted toward saying that cyan is blue.
+          在早期实验中，我们发现人们的响应集中在 175 附近，巧合的是，这正好是 HTML 命名颜色“绿松石”的色相
+          <span class="color-chip-turquoise mr-1"></span>。这很有趣，因为蓝色和绿色的名义边界在 180，即 HTML 命名颜色“青色”
+          <span class="color-chip-cyan mr-1"></span>。这意味着大多数人的边界偏向认为青色是蓝色。
         </p>
-        <h2>What happens when I hit submit?</h2>
+        <h2>当我点击提交时会发生什么？</h2>
         <p>
-          When you hit submit, we store your responses anonymously so we can aggregate them later
-          and measure aggregate naming curves. We don't store any information that would identify
-          you personally.
+          当您点击提交时，我们会匿名存储您的响应，以便日后汇总并测量总体命名曲线。我们不会存储任何能够识别您的个人信息。
         </p>
-        <h2>Who made this?</h2>
+        <h2>这是谁做的？</h2>
         <p>
-          I'm Patrick Mineault, a neuroscience and AI researcher. I made this as a side project
-          using Claude 3.5 Sonnet. I obtained a PhD in visual neuroscience from McGill in 2014. You
-          can read <a href="https://neuroai.science">my blog here</a>.
-        </p>
-        <h2>Can I make a version of this for my favorite color pair?</h2>
-        <p>
-          <a href="https://github.com/patrickmineault/ismyblue">Right this way to Github.</a>
+          原作者是 Patrick Mineault，一名神经科学和 AI 研究人员，使用 Claude 3.5 Sonnet 作为一个副项目制作了这个。原作者于 2014 年在麦吉尔大学获得视觉神经科学博士学位。
         </p>
       </div>
     </div>
