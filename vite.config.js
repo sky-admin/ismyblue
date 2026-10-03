@@ -8,7 +8,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 // https://vitejs.dev/config/
 export default defineConfig({
   define: {
-    'process.env': process.env // 将所有环境变量挂载到 process.env
+    'process.env.SUPABASE_KEY': JSON.stringify(process.env.SUPABASE_KEY || '')
   },
   plugins: [
     vue(),

@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>你眼中的蓝和别人眼中的一样吗？</title>
+    <title>你眼中的蓝和别人一样吗？蓝绿色感知边界测试 - IsMyBlue</title>
+    <meta
+      name="description"
+      content="通过一组蓝绿色色块，看看你眼中的蓝和别人眼中的蓝是否一样。逐轮选择“这是蓝色”或“这是绿色”，测试会根据回答估计你的蓝绿分界，并与已有参与者的群体分布比较。结果页展示分界色相、颜色样例和相对位置，可以重新开始、比较多次体验，也可以阅读项目说明了解测试方法。这是一项在线颜色命名体验，关注不同人对蓝绿色分类的差异。"
+    />
+    <link rel="canonical" href="https://ismyblue.lihuanyu.com/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,26 +16,31 @@
       rel="stylesheet"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ismy.blue/" />
-    <meta property="og:title" content="Is my blue your blue?" />
+    <meta property="og:url" content="https://ismyblue.lihuanyu.com/" />
+    <meta property="og:title" content="你眼中的蓝和别人一样吗？蓝绿色感知边界测试 - IsMyBlue" />
     <meta
       property="og:description"
-      content="Test your color perception with this interactive test."
+      content="逐轮选择蓝色或绿色，估计你的蓝绿感知分界，并与已有参与者的群体分布比较。"
     />
-    <meta property="og:image" content="https://ismy.blue/card.png" />
+    <meta property="og:image" content="https://ismyblue.lihuanyu.com/card.png" />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://ismy.blue/" />
-    <meta property="twitter:title" content="Is my blue your blue?" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://ismyblue.lihuanyu.com/" />
+    <meta name="twitter:title" content="你眼中的蓝和别人一样吗？蓝绿色感知边界测试 - IsMyBlue" />
     <meta
-      property="twitter:description"
-      content="Test your color perception with this interactive test. "
+      name="twitter:description"
+      content="逐轮选择蓝色或绿色，估计你的蓝绿感知分界，并与已有参与者的群体分布比较。"
     />
-    <meta property="twitter:image" content="https://ismy.blue/card.png" />
+    <meta name="twitter:image" content="https://ismyblue.lihuanyu.com/card.png" />
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <main class="flex min-h-screen flex-col items-center justify-center px-4 pb-[60px] text-center">
+        <h1 class="bg-white text-[2.5rem] font-bold text-black">测试你对蓝绿色的区分</h1>
+        <noscript>请启用 JavaScript 来选择蓝绿色色块并完成测试。</noscript>
+      </main>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
